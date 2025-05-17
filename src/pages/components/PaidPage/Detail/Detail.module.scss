@@ -1,0 +1,201 @@
+.detail_page {
+  margin-top: 100px;
+
+  &_container {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &_layout {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      max-width: 760px;
+
+      &_title {
+        font-family: var(--font-inter);
+        font-weight: 700;
+        font-size: 40px;
+        color: var(--text-color);
+      }
+
+      &_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        background: #eefffe;
+
+        img {
+          width: 79px;
+          height: 79px;
+          object-fit: contain;
+        }
+      }
+
+      &_list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 20px;
+
+        &_link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+
+          &_button {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 100%;
+            background: #d9d9d9;
+
+            span {
+              font-family: var(--font-inter);
+              font-weight: 500;
+              font-size: 20px;
+              color: #fff;
+            }
+
+            &_active {
+              background: var(--primary-color);
+            }
+          }
+
+          &_icon {
+            color: #d9d9d9;
+
+            &_active {
+              color: var(--primary-color);
+            }
+          }
+        }
+      }
+
+      &_description {
+        font-family: var(--font-inter);
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--text-color);
+      }
+    }
+
+    &_content_schedule {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 540px;
+
+      &_day_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        button {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &_button {
+          width: 60px;
+          height: 60px;
+          padding: 16px 18px;
+          border-radius: 20px;
+          border: none;
+          background: #fafafa;
+          transition: background 0.3s ease, color 0.3s ease;
+
+          span {
+            font-family: var(--font-inter);
+            font-weight: 600;
+            font-size: 22px;
+            color: var(--text-color);
+          }
+
+          &_active {
+            background: #06c0b4;
+
+            span {
+              color: #ffff;
+            }
+          }
+        }
+      }
+
+      &_information {
+        width: 540px;
+        height: 267px;
+        padding: 30px 40px;
+        border-radius: 50px;
+        background: #fafafa;
+
+        &_item {
+          display: flex;
+          flex-direction: column;
+          gap: 50px;
+
+          &_title {
+            font-family: var(--font-inter);
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color);
+          }
+
+          &_description {
+            margin-top: 20px;
+            font-family: var(--font-inter);
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--text-color);
+          }
+
+          &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            &_email {
+              font-family: var(--font-inter);
+              font-weight: 500;
+              font-size: 18px;
+              color: var(--text-color);
+
+              span {
+                color: var(--primary-color);
+              }
+            }
+
+            &_phone_number {
+              font-family: var(--font-inter);
+              font-weight: 500;
+              font-size: 18px;
+              color: var(--text-color);
+            }
+
+            &_address {
+              font-family: var(--font-inter);
+              font-weight: 500;
+              font-size: 18px;
+              color: var(--text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}

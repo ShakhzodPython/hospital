@@ -1,0 +1,17 @@
+.about_us_service {
+  margin-top: 150px;
+
+  &_container {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &_title {
+    font-family: var(--font-inter);
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--text-color);
+  }
+
+}

@@ -1,0 +1,17 @@
+{
+  "breadcrumbs": {
+    "home": "Главная страница",
+    "contact": "Связаться с нами",
+    "appointment": "Запись на прием",
+    "paid_services": "Платный услуги",
+    "therapy": "Терапия",
+    "surgery": "Хирургия",
+    "cardiology": "Кардиология",
+    "neurology": "Неврология",
+    "gynecology": "Гинекология",
+    "andrologiya": "Андрология",
+    "allergology": "Аллергология",
+    "laboratory_diagnoses": "Лабораторные диагнозы",
+    "endocrinology": "Эндокринология"
+  }
+}

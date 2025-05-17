@@ -1,0 +1,17 @@
+{
+  "breadcrumbs": {
+    "home": "Homepage",
+    "contact": "Contact with us",
+    "appointment": "Appointment",
+    "paid_services": "Paid services",
+    "therapy": "Therapy",
+    "surgery": "Surgery",
+    "cardiology": "Cardiology",
+    "neurology": "Neurology",
+    "gynecology": "Gynecology",
+    "andrologiya": "Andrologiya",
+    "allergology": "Allergology",
+    "laboratory_diagnoses": "Laboratory diagnoses",
+    "endocrinology": "Endocrinology"
+  }
+}
