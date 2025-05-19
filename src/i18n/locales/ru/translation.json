@@ -12,6 +12,10 @@
     "andrologiya": "Андрология",
     "allergology": "Аллергология",
     "laboratory_diagnoses": "Лабораторные диагнозы",
-    "endocrinology": "Эндокринология"
+    "endocrinology": "Эндокринология",
+    "doctors_and_specialists": "Врачи и специалисты",
+    "therapist": "Терапевт",
+    "pediatrician": "Педиатр",
+    "gynecologist": "Гинеколог"
   }
 }

@@ -5,6 +5,10 @@
     max-width: 1520px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 1440px) {
+      max-width: 1320px;
+    }
   }
 
   &_content {
@@ -19,7 +23,7 @@
       align-items: stretch;
 
       &_background {
-        width: 1020px;
+        width: 100%;
         min-height: 460px;
         padding: 50px;
         border-radius: 50px;

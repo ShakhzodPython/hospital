@@ -1,19 +1,18 @@
-import { useLocation } from 'react-router';
-import { breadcrumbKeys } from '../utils/breadcrumbs';
-import { useTranslation } from 'react-i18next';
+import { useLocation } from "react-router";
+import { breadcrumbKeys } from "../utils/breadcrumbs";
+import { useTranslation } from "react-i18next";
 
 export function useBreadcrumbs() {
   const { pathname } = useLocation();
   const { t } = useTranslation();
 
-  const segments = pathname.split('/').filter(Boolean);
+  const segments = pathname.split("/").filter(Boolean);
 
   const breadcrumbs = segments.map((segment, id) => {
-    const url = '/' + segments.slice(0, id + 1).join('/');
+    const url = "/" + segments.slice(0, id + 1).join("/");
     const key =
-      breadcrumbKeys[segment.replace('-', '_')] || segment.replace('-', '_');
-    
-    
+      breadcrumbKeys[segment.replace(/-/g, "_")] || segment.replace(/-/g, "_");
+
     const translated = t(`breadcrumbs.${key}`, key);
 
     return {
@@ -21,5 +20,5 @@ export function useBreadcrumbs() {
       url,
     };
   });
-  return [{ name: t('breadcrumbs.home'), url: '/' }, ...breadcrumbs];
+  return [{ name: t("breadcrumbs.home"), url: "/" }, ...breadcrumbs];
 }

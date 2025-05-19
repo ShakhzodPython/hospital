@@ -4,4 +4,5 @@ export type SpecialistType = {
   job: string;
   image: string;
   phone_number?: string;
+  slug?: string;
 };

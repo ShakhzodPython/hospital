@@ -5,6 +5,10 @@
     max-width: 1520px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 1440px) {
+      max-width: 1320px;
+    }
   }
 
   &_content {
@@ -16,6 +20,10 @@
       justify-content: start;
       align-items: start;
       gap: 50px;
+
+      @media (max-width: 1440px) {
+        gap: 45px;
+      }
 
       &_card {
         width: 407px;

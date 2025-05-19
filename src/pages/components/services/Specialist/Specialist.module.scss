@@ -5,6 +5,10 @@
     max-width: 1520px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 1440px) {
+      max-width: 1320px;
+    }
   }
 
   &_layout {
@@ -47,6 +51,7 @@
       margin-top: 50px;
 
       &_slide {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         width: 473px;
@@ -77,6 +82,10 @@
           align-items: end;
           gap: 85px;
           height: 440px;
+
+          @media (max-width: 1440px) {
+            gap: 45px;
+          }
 
           &_job {
             margin-bottom: 30px;
