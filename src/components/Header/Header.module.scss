@@ -15,7 +15,9 @@
 
     @media (max-width: 1024px) {
       max-width: 920px;
+      padding: 0 25px;
     }
+
   }
 
   &_nav {
@@ -113,12 +115,11 @@
 
       @media (max-width: 1024px) {
         display: block;
-        position: fixed;
+        position: absolute;
         top: 80px;
         left: 0;
         width: 100%;
         background: #fff;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         z-index: 10;
       }
 

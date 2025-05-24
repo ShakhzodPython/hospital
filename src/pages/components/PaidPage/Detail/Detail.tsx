@@ -159,11 +159,8 @@ export function Detail() {
             </div>
             <ul className={styles.detail_page_layout_content_list}>
               {services.map((service, index) => (
-                <Link to={`/paid-services/${service.slug}`}>
-                  <li
-                    key={index}
-                    className={styles.detail_page_layout_content_list_link}
-                  >
+                <Link key={index} to={`/paid-services/${service.slug}`}>
+                  <li className={styles.detail_page_layout_content_list_link}>
                     <button
                       className={`${
                         styles.detail_page_layout_content_list_link_button

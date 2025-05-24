@@ -1,6 +1,7 @@
 .paid_page {
   margin-top: 100px;
 
+
   &_container {
     max-width: 1520px;
     width: 100%;
@@ -9,10 +10,15 @@
     @media (max-width: 1440px) {
       max-width: 1320px;
     }
+
+    @media (max-width: 1024px) {
+      max-width: 860px;
+    }
   }
 
   &_content {
     margin-top: 50px;
+
 
     &_services {
       display: flex;
@@ -23,6 +29,12 @@
 
       @media (max-width: 1440px) {
         gap: 45px;
+      }
+
+      @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       &_card {

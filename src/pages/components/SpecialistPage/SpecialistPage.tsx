@@ -60,7 +60,7 @@ export function SpecialistPage() {
                 key={index}
                 className={styles.specialist_page_content_layout_specialist}
               >
-                <Link to={`/doctors-and-specialists/${specialist.job}`}>
+                <Link to={`/doctors-and-specialists/${specialist.slug}`}>
                   <div
                     className={
                       styles.specialist_page_content_layout_specialist_heading

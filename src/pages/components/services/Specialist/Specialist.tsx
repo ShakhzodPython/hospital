@@ -1,16 +1,16 @@
-import "swiper/css";
-import "swiper/css/navigation";
-import { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import { ArrowLeft, ArrowRight, MoveUpRight } from "lucide-react";
-import { Link, useNavigate } from "react-router";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import { ArrowLeft, ArrowRight, MoveUpRight } from 'lucide-react';
+import { Link, useNavigate } from 'react-router';
 
-import styles from "./Specialist.module.scss";
-import girl from "../../../../assets/images/girl.png";
-import woman from "../../../../assets/images/woman.png";
-import man from "../../../../assets/images/man.png";
-import { SpecialistType } from "./Specialist.types";
+import styles from './Specialist.module.scss';
+import girl from '../../../../assets/images/girl.png';
+import woman from '../../../../assets/images/woman.png';
+import man from '../../../../assets/images/man.png';
+import { SpecialistType } from './Specialist.types';
 
 export function Specialist() {
   const navigate = useNavigate();
@@ -19,38 +19,38 @@ export function Specialist() {
 
   const specialists: Array<SpecialistType> = [
     {
-      name: "Davron Hamraev Bekmirza o‘g‘li",
+      name: 'Davron Hamraev Bekmirza o‘g‘li',
       description:
-        "Tajribali terapevt. Ichki kasalliklar va umumiy tibbiy yordam bo‘yicha mutaxassis.",
-      job: "Terapevt",
+        'Tajribali terapevt. Ichki kasalliklar va umumiy tibbiy yordam bo‘yicha mutaxassis.',
+      job: 'Terapevt',
       image: man,
-      slug: "therapist",
+      slug: 'therapist',
     },
     {
-      name: "Bakhdirova Asad Rustam qizi",
+      name: 'Bakhdirova Asad Rustam qizi',
       description:
-        "Bolalar salomatligi bo‘yicha yetakchi pediatr. 0–16 yoshgacha bolalar bilan ishlaydi.",
-      job: "Pediatr",
+        'Bolalar salomatligi bo‘yicha yetakchi pediatr. 0–16 yoshgacha bolalar bilan ishlaydi.',
+      job: 'Pediatr',
       image: girl,
-      slug: "pediatrician",
+      slug: 'pediatrician',
     },
 
     {
-      name: "Mahliyo Tursunova Azamat qizi",
+      name: 'Mahliyo Tursunova Azamat qizi',
       description:
-        "Ayollar salomatligi va homiladorlikni kuzatish bo‘yicha mutaxassis.",
-      job: "Ginekolog",
+        'Ayollar salomatligi va homiladorlikni kuzatish bo‘yicha mutaxassis.',
+      job: 'Ginekolog',
       image: woman,
-      slug: "gynecologist",
+      slug: 'gynecologist',
     },
 
     {
-      name: "Mahliyo Tursunova Azamat qizi",
+      name: 'Mahliyo Tursunova Azamat qizi',
       description:
-        "Ayollar salomatligi va homiladorlikni kuzatish bo‘yicha mutaxassis.",
-      job: "Ginekolog",
+        'Ayollar salomatligi va homiladorlikni kuzatish bo‘yicha mutaxassis.',
+      job: 'Ginekolog',
       image: woman,
-      slug: "gynecologist",
+      slug: 'gynecologist',
     },
   ];
 
@@ -61,10 +61,10 @@ export function Specialist() {
           <h1 className={styles.specialists_service_layout_title}>
             Shifokorlar va mutaxassislar
           </h1>
-          <Link to="/doctors-and-specialists">
+          <Link to='/doctors-and-specialists'>
             <button className={styles.specialists_service_layout_button}>
               <span>Hammasi</span>
-              <MoveUpRight size={20} color="#06c0b4" />
+              <MoveUpRight size={20} color='#06c0b4' />
             </button>
           </Link>
         </div>
@@ -101,7 +101,7 @@ export function Specialist() {
           onInit={(swiper) => {
             if (
               swiper.params.navigation &&
-              typeof swiper.params.navigation !== "boolean"
+              typeof swiper.params.navigation !== 'boolean'
             ) {
               swiper.params.navigation.prevEl = prevRef.current;
               swiper.params.navigation.nextEl = nextRef.current;
@@ -110,6 +110,24 @@ export function Specialist() {
             }
           }}
           modules={[Navigation]}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }}
           className={styles.specialists_service_layout_swiper}
         >
           {specialists.map((specialist, index) => (

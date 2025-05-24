@@ -55,6 +55,8 @@ export function Detail() {
     },
   ];
 
+  
+
   const specialist = specialists.find((specialist) => specialist.slug === slug);
 
   return (

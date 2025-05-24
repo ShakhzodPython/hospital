@@ -9,6 +9,10 @@
     @media (max-width: 1440px) {
       max-width: 1320px;
     }
+
+    @media (max-width: 1024px) {
+      padding: 0 20px;
+    }
   }
 
   &_layout {
@@ -60,6 +64,8 @@
         border-radius: 20px;
         background: #fafafa;
 
+       
+
         &_title {
           font-family: var(--font-inter);
           font-weight: 600;
@@ -93,6 +99,10 @@
             font-weight: 500;
             font-size: 16px;
             color: var(--primary-color);
+
+            @media (max-width: 1024px) {
+              display: none;
+            }
           }
 
           img {

@@ -9,6 +9,10 @@
     @media (max-width: 1440px) {
       max-width: 1320px;
     }
+
+    @media (max-width: 1024px) {
+      padding: 0 20px;
+    }
   }
 
   &_layout {
@@ -54,9 +58,9 @@
         display: flex;
         flex-direction: column;
         width: 341px;
+        height: 360px;
         padding-top: 30px;
         padding-left: 30px;
-        height: 360px;
         border-radius: 20px;
         background: #fafafa;
 
