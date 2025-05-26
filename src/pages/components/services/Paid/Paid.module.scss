@@ -25,6 +25,10 @@
       font-weight: 700;
       font-size: 40px;
       color: var(--text-color);
+
+      @media (max-width: 425px) {
+        font-size: 30px;
+      }
     }
 
     button {

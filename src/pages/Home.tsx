@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 import { Paid } from './components/services/Paid/Paid';
 import { Specialist } from './components/services/Specialist/Specialist';
 import { Patient } from './components/services/Patient/Patient';
-import { AboutUs } from './components/services/AboutUs/AboutUs';
 
 export function Home() {
   return (
@@ -76,7 +75,6 @@ export function Home() {
       <Paid />
       <Specialist />
       <Patient />
-      <AboutUs />
     </>
   );
 }

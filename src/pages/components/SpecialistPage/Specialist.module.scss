@@ -13,6 +13,10 @@
     @media (max-width: 1024px) {
       max-width: 860px;
     }
+
+    @media (max-width: 768px) {
+      max-width: 645px;
+    }
   }
 
   &_content {
@@ -39,12 +43,18 @@
         gap: 40px;
       }
 
+
+
       &_specialist {
         width: 407px;
         height: auto;
         padding: 30px 30px 0px 30px;
         border-radius: 20px;
         background: #fafafa;
+
+        @media (max-width: 768px) {
+          width: 300px;
+        }
 
         &_heading {
           display: flex;
