@@ -24,7 +24,7 @@ export function Detail() {
 
   const services: Array<ServiceType> = [
     {
-      name: 'Terapıya',
+      name: 'Terapiya',
       image: love,
       slug: 'therapy',
       description:

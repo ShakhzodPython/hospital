@@ -3,15 +3,17 @@ import { Link } from 'react-router';
 import styles from './Footer.module.scss';
 import instagram from '../../assets/icons/instagram.svg';
 import telegram from '../../assets/icons/telegram.svg';
+import {useTranslation} from "react-i18next";
 
 export function Footer() {
+  const { t } = useTranslation()
   return (
     <div className={styles.footer}>
       <div className={styles.footer_container}>
         {/* Column 1 */}
         <div className={styles.footer_column}>
           <Link to='/' className={styles.footer_column_logo}>
-            5-sonli shifoxona
+            {t("title_main_name")}
           </Link>
           <ul className={styles.footer_column_list}>
             <p className={styles.footer_column_list_link}>Manzil:</p>

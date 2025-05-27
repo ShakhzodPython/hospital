@@ -3,58 +3,60 @@ import { ChevronDown } from 'lucide-react';
 import styles from './Patient.module.scss';
 import { PatientType } from './Patient.type';
 import { useState } from 'react';
+import {useTranslation} from "react-i18next";
 
 export function Patient() {
+  const { t } = useTranslation()
   const patientsLeftSide: Array<PatientType> = [
     {
-      name: 'Qabulga yozilish tartibi',
+      name: t('button_order_reception'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
     {
-      name: 'Bo‘limlar ro‘yxati va xizmatlar',
+      name: t('button_departments_and_services'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
     {
-      name: 'Narxlar ro‘yxati',
+      name: t('button_price_list'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
     {
-      name: 'Kasalliklar haqida ma’lumotlar',
+      name: t('button_diseases_info'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
     {
-      name: 'Shifoxona ichki qoidalari',
+      name: t('button_hospital_rules'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
   ];
   const patientsRightSide: Array<PatientType> = [
     {
-      name: 'Xarita va yo‘l ko‘rsatmalar',
+      name: t('button_map_and_guide'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
     {
-      name: 'Aloqa markazi / Yordam xizmati',
+      name: t('button_contact_help'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
     {
-      name: 'Huquq va majburiyatlar',
+      name: t('button_right_obligations'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
     {
-      name: 'Reabilitatsiya bo‘limi',
+      name: t('button_rehabilitation'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
     {
-      name: 'Foydali yuklab olishlar',
+      name: t('button_useful_downloads'),
       description:
         'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, neque.',
     },
@@ -76,7 +78,7 @@ export function Patient() {
       <div className={styles.patient_service_container}>
         <div className={styles.patient_service_content}>
           <h3 className={styles.patient_service_content_title}>
-            Bemorlar uchun
+            {t("title_for_patients")}
           </h3>
           <div className={styles.patient_service_content_layout}>
             <div className={styles.patient_service_content_layout_dropdown}>

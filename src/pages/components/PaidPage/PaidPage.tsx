@@ -18,7 +18,7 @@ export function PaidPage() {
   const breadcrumbs = useBreadcrumbs();
 
   const services: Array<ServiceType> = [
-    { name: 'Terapıya', image: love, slug: 'therapy' },
+    { name: 'Terapiya', image: love, slug: 'therapy' },
     { name: 'Xirurgiya', image: scalpel, slug: 'surgery' },
     { name: 'Kardiologiya', image: pulse, slug: 'cardiology' },
     { name: 'Nevrologiya', image: brain, slug: 'neurology' },

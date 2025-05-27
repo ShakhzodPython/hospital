@@ -17,14 +17,15 @@ export function NavLinks({ activeLink, setActiveLink }: NavLinksProps) {
     i18n.changeLanguage(lng);
     localStorage.setItem('lang', lng);
   };
+  const { t } = useTranslation()
 
   const links: Array<LinksType> = useMemo(
     () => [
-      { name: 'Bosh sahifa', url: '/' },
-      { name: 'Pullik xizmatlar', url: '/paid-services' },
-      { name: 'Shifokorlar va mutaxassislar', url: '/doctors-and-specialists' },
-      { name: 'Bemorlar uchun', url: '/for-patients' },
-      { name: 'Biz haqimizda', url: '/about-us' },
+      { name: t('title_homepage'), url: '/' },
+      { name: t('title_paid_services'), url: '/paid-services' },
+      { name: t('title_doctors_specialists'), url: '/doctors-and-specialists' },
+      { name: t('title_for_patients'), url: '/for-patients' },
+      { name: t('title_about_us'), url: '/about-us' },
     ],
     []
   );

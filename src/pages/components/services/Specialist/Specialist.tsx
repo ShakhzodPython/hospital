@@ -11,46 +11,48 @@ import girl from '../../../../assets/images/girl.png';
 import woman from '../../../../assets/images/woman.png';
 import man from '../../../../assets/images/man.png';
 import { SpecialistType } from './Specialist.types';
+import {useTranslation} from "react-i18next";
 
 export function Specialist() {
   const navigate = useNavigate();
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const { t } = useTranslation()
 
   const specialists: Array<SpecialistType> = [
     {
-      name: 'Davron Hamraev Bekmirza o‘g‘li',
+      name: t('doctor_1'),
       description:
-        'Tajribali terapevt. Ichki kasalliklar va umumiy tibbiy yordam bo‘yicha mutaxassis.',
-      job: 'Terapevt',
+        t('doctor_1_title'),
+      job: t('doctor_1_job'),
       image: man,
-      slug: 'therapist',
+      slug: t('doctor_1_slug'),
     },
     {
-      name: 'Bakhdirova Asad Rustam qizi',
+      name: t('doctor_2'),
       description:
-        'Bolalar salomatligi bo‘yicha yetakchi pediatr. 0–16 yoshgacha bolalar bilan ishlaydi.',
-      job: 'Pediatr',
+        t('doctor_2_title'),
+      job: t('doctor_2_job'),
       image: girl,
-      slug: 'pediatrician',
+      slug: t('doctor_2_slug'),
     },
 
     {
-      name: 'Mahliyo Tursunova Azamat qizi',
+      name: t('doctor_3'),
       description:
-        'Ayollar salomatligi va homiladorlikni kuzatish bo‘yicha mutaxassis.',
-      job: 'Ginekolog',
+        t('doctor_3_title'),
+      job: t('doctor_3_job'),
       image: woman,
-      slug: 'gynecologist',
+      slug: t('doctor_3_slug'),
     },
 
     {
-      name: 'Mahliyo Tursunova Azamat qizi',
+      name: t('doctor_4'),
       description:
-        'Ayollar salomatligi va homiladorlikni kuzatish bo‘yicha mutaxassis.',
-      job: 'Ginekolog',
+        t('doctor_4_title'),
+      job: t('doctor_4_job'),
       image: woman,
-      slug: 'gynecologist',
+      slug: t('doctor_4_slug'),
     },
   ];
 
@@ -59,11 +61,11 @@ export function Specialist() {
       <div className={styles.specialists_service_container}>
         <div className={styles.specialists_service_layout}>
           <h1 className={styles.specialists_service_layout_title}>
-            Shifokorlar va mutaxassislar
+            {t("title_doctors_specialists")}
           </h1>
           <Link to='/doctors-and-specialists'>
             <button className={styles.specialists_service_layout_button}>
-              <span>Hammasi</span>
+              <span>{t("button_all")}</span>
               <MoveUpRight size={20} color='#06c0b4' />
             </button>
           </Link>
