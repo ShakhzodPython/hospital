@@ -8,47 +8,50 @@ import phone from "../../../../assets/icons/phone.svg";
 import { useBreadcrumbs } from "../../../../hooks/useBreadcrumbs";
 import { SpecialistType } from "../../services/Specialist/Specialist.types";
 import { Breadcrumbs } from "../../../../components/Breadcrumbs/Breadcrumbs";
+import {useTranslation} from "react-i18next";
 
 export function Detail() {
   const { slug } = useParams();
 
   const breadcrumbs = useBreadcrumbs();
 
+  const { t } = useTranslation()
+
   const specialists: Array<SpecialistType> = [
     {
-      name: "Davron Hamraev Bekmirza o‘g‘li",
+      name: t('doctor_1'),
       description:
-        "Tajribali terapevt. Ichki kasalliklar va umumiy tibbiy yordam bo‘yicha mutaxassis.",
-      job: "Terapevt",
+        t('doctor_1_title'),
+      job: t('doctor_1_job'),
       image: man,
       phone_number: "+998 62 000 00 00",
       slug: "therapist",
     },
     {
-      name: "Bakhdirova Asad Rustam qizi",
+      name: t('doctor_2'),
       description:
-        "Bolalar salomatligi bo‘yicha yetakchi pediatr. 0–16 yoshgacha bolalar bilan ishlaydi.",
-      job: "Pediatr",
+        t('doctor_2_title'),
+      job: t('doctor_2_job'),
       image: girl,
       phone_number: "+998 62 000 00 00",
       slug: "pediatrician",
     },
 
     {
-      name: "Mahliyo Tursunova Azamat qizi",
+      name: t('doctor_3'),
       description:
-        "Ayollar salomatligi va homiladorlikni kuzatish bo‘yicha mutaxassis.",
-      job: "Ginekolog",
+        t('doctor_3_title'),
+      job: t('doctor_3_job'),
       image: woman,
       phone_number: "+998 62 000 00 00",
       slug: "gynecologist",
     },
 
     {
-      name: "Mahliyo Tursunova Azamat qizi",
+      name: t('doctor_4'),
       description:
-        "Ayollar salomatligi va homiladorlikni kuzatish bo‘yicha mutaxassis.",
-      job: "Ginekolog",
+        t('doctor_4_title'),
+      job: t('doctor_4_job'),
       image: woman,
       phone_number: "+998 62 000 00 00",
       slug: "gynecologist",

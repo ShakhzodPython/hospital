@@ -16,13 +16,13 @@ export function Footer() {
             {t("title_main_name")}
           </Link>
           <ul className={styles.footer_column_list}>
-            <p className={styles.footer_column_list_link}>Manzil:</p>
-            <p className={styles.footer_column_list_link}>Telefon:</p>
+            <p className={styles.footer_column_list_link}>{t("title_footer_address_key")}<span>{t("title_footer_address_value")}</span></p>
+            <p className={styles.footer_column_list_link}>{t("title_footer_number_key")}<span>+ 998 99 999 99 99</span></p>
             <p className={styles.footer_column_list_link}>
-              E-mail: <span>5shifoxonasi@gmail.com</span>
+              {t("title_footer_email_key")}<span>5shifoxonasi@gmail.com</span>
             </p>
             <p className={styles.footer_column_list_link}>
-              Ish vaqti: Dushanba–Juma,{' '}
+              {t("title_footer_work_schedule_key")}
               <span className={styles.highlight}>08:00 - 17:00</span>
             </p>
           </ul>
@@ -38,40 +38,40 @@ export function Footer() {
 
         {/* Column 2 */}
         <div className={styles.footer_column} >
-          <h3 className={styles.footer_column_title}>Biz haqimizda</h3>
+          <h3 className={styles.footer_column_title}>{t("title_about_us")}</h3>
           <ul className={styles.footer_column_list}>
-            <li className={styles.footer_column_list_link}>Karyera</li>
-            <li className={styles.footer_column_list_link}>Shifokorlar</li>
-            <li className={styles.footer_column_list_link}>Blog</li>
+            <li className={styles.footer_column_list_link}>{t("title_footer_career")}</li>
+            <li className={styles.footer_column_list_link}>{t("title_footer_doctors")}</li>
+            <li className={styles.footer_column_list_link}>{t("title_footer_blog")}</li>
             <li className={styles.footer_column_list_link}>
-              Savollar va javoblar
+              {t("title_footer_question_answer")}
             </li>
-            <li className={styles.footer_column_list_link}>Kontaktlar</li>
+            <li className={styles.footer_column_list_link}>{t("title_footer_contacts")}</li>
           </ul>
         </div>
 
         {/* Column 3 */}
         <div className={styles.footer_column}>
-          <h3 className={styles.footer_column_title}>Xizmatlar</h3>
+          <h3 className={styles.footer_column_title}>{t("title_footer_services")}</h3>
           <ul className={styles.footer_column_list}>
-            <li className={styles.footer_column_list_link}>Tez yordam</li>
-            <li className={styles.footer_column_list_link}>Kasalxona</li>
-            <li className={styles.footer_column_list_link}>Laboratoriya</li>
+            <li className={styles.footer_column_list_link}>{t("title_footer_ambulance")}</li>
+            <li className={styles.footer_column_list_link}>{t("title_footer_hospital")}</li>
+            <li className={styles.footer_column_list_link}>{t("title_footer_laboratory")}</li>
             <li className={styles.footer_column_list_link}>
-            5-sonli shifohona
+              {t("title_main_name")}
             </li>
           </ul>
         </div>
 
         {/* Column 4 */}
         <div className={styles.footer_column}>
-          <h3 className={styles.footer_column_title}>Yordam</h3>
+          <h3 className={styles.footer_column_title}>{t("title_footer_help")}</h3>
           <ul className={styles.footer_column_list}>
             <li className={styles.footer_column_list_link}>
-              Maxfiylik siyosati
+              {t("title_footer_privacy_policy")}
             </li>
             <li className={styles.footer_column_list_link}>
-              Foydalanuvchi shartnomasi
+              {t("title_footer_user_agreement")}
             </li>
           </ul>
         </div>

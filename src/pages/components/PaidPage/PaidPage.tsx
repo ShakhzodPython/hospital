@@ -13,24 +13,26 @@ import network from '../../../assets/icons/network.svg';
 import { Breadcrumbs } from '../../../components/Breadcrumbs/Breadcrumbs';
 import { useBreadcrumbs } from '../../../hooks/useBreadcrumbs';
 import { ServiceType } from '../services/Paid/Paid.types';
+import {useTranslation} from "react-i18next";
 
 export function PaidPage() {
   const breadcrumbs = useBreadcrumbs();
+  const { t } = useTranslation()
 
   const services: Array<ServiceType> = [
-    { name: 'Terapiya', image: love, slug: 'therapy' },
-    { name: 'Xirurgiya', image: scalpel, slug: 'surgery' },
-    { name: 'Kardiologiya', image: pulse, slug: 'cardiology' },
-    { name: 'Nevrologiya', image: brain, slug: 'neurology' },
-    { name: 'Ginekologiya', image: female, slug: 'gynecology' },
-    { name: 'andrologiya', image: male, slug: 'andrologiya' },
-    { name: 'Allergologiya', image: virus, slug: 'allergology' },
+    { name: t('title_therapy'), image: love, slug: 'therapy' },
+    { name: t('title_surgery'), image: scalpel, slug: 'surgery' },
+    { name: t('title_cardiology'), image: pulse, slug: 'cardiology' },
+    { name: t('title_neurology'), image: brain, slug: 'neurology' },
+    { name: t('title_gynecology'), image: female, slug: 'gynecology' },
+    { name: t('title_andrology'), image: male, slug: 'andrology' },
+    { name: t('title_allergology'), image: virus, slug: 'allergology' },
     {
-      name: 'Laboratoriya tashxislari',
+      name: t('title_laboratory-diagnoses'),
       image: flask,
       slug: 'laboratory-diagnoses',
     },
-    { name: 'Endokrinologiya', image: network, slug: 'endocrinology' },
+    { name: t('title_endocrinology'), image: network, slug: 'endocrinology' },
   ];
 
   return (

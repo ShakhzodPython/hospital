@@ -26,7 +26,7 @@ export function Specialist() {
         t('doctor_1_title'),
       job: t('doctor_1_job'),
       image: man,
-      slug: t('doctor_1_slug'),
+      slug: "therapist",
     },
     {
       name: t('doctor_2'),
@@ -34,7 +34,7 @@ export function Specialist() {
         t('doctor_2_title'),
       job: t('doctor_2_job'),
       image: girl,
-      slug: t('doctor_2_slug'),
+      slug: "pediatrician",
     },
 
     {
@@ -43,7 +43,7 @@ export function Specialist() {
         t('doctor_3_title'),
       job: t('doctor_3_job'),
       image: woman,
-      slug: t('doctor_3_slug'),
+      slug: "gynecologist",
     },
 
     {
@@ -52,7 +52,7 @@ export function Specialist() {
         t('doctor_4_title'),
       job: t('doctor_4_job'),
       image: woman,
-      slug: t('doctor_4_slug'),
+      slug: "gynecologist",
     },
   ];
 

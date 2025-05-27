@@ -16,129 +16,131 @@ import { ServiceType } from '../../services/Paid/Paid.types';
 import { useBreadcrumbs } from '../../../../hooks/useBreadcrumbs';
 import { Breadcrumbs } from '../../../../components/Breadcrumbs/Breadcrumbs';
 import { ScheduleType } from '../../ContactPage/ContactPage.types';
+import {useTranslation} from "react-i18next";
 
 export function Detail() {
   const { slug } = useParams();
+  const { t } = useTranslation()
 
   const breadcrumbs = useBreadcrumbs();
 
   const services: Array<ServiceType> = [
     {
-      name: 'Terapiya',
+      name: t('title_therapy'),
       image: love,
       slug: 'therapy',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur fugiat labore nemo, beatae molestias perspiciatis. Alias assumenda doloremque laborum!',
     },
     {
-      name: 'Xirurgiya',
+      name: t('title_surgery'),
       image: scalpel,
       slug: 'surgery',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur fugiat labore nemo, beatae molestias perspiciatis. Alias assumenda doloremque laborum!',
     },
     {
-      name: 'Kardiologiya',
+      name: t('title_cardiology'),
       image: pulse,
       slug: 'cardiology',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur fugiat labore nemo, beatae molestias perspiciatis. Alias assumenda doloremque laborum!',
     },
     {
-      name: 'Nevrologiya',
+      name: t('title_neurology'),
       image: brain,
       slug: 'neurology',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur fugiat labore nemo, beatae molestias perspiciatis. Alias assumenda doloremque laborum!',
     },
     {
-      name: 'Ginekologiya',
+      name: t('title_gynecology'),
       image: female,
       slug: 'gynecology',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur fugiat labore nemo, beatae molestias perspiciatis. Alias assumenda doloremque laborum!',
     },
     {
-      name: 'Andrologiya',
+      name: t('title_andrology'),
       image: male,
       slug: 'andrologiya',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur fugiat labore nemo, beatae molestias perspiciatis. Alias assumenda doloremque laborum!',
     },
     {
-      name: 'Allergologiya',
+      name: t('title_allergology'),
       image: virus,
       slug: 'allergology',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque consequuntur fugiat labore nemo, beatae molestias perspiciatis. Alias assumenda doloremque laborum!',
     },
     {
-      name: 'Laboratoriya tashxislari',
+      name: t('title_laboratory-diagnoses'),
       image: flask,
       slug: 'laboratory-diagnoses',
     },
-    { name: 'Endokrinologiya', image: network, slug: 'endocrinology' },
+    { name: t('title_endocrinology'), image: network, slug: 'endocrinology' },
   ];
 
   const schedules: Array<ScheduleType> = [
     {
-      day: 'Du',
-      information: 'Dushanba — Juma: 08:00 – 17:00',
+      day: t("title_monday_short"),
+      information: `${t("title_footer_work_schedule_key")}08:00 - 17:00`,
       email: '5shifoxonasi@gmail.com',
       phone_number: '+998 62 000 00 00',
       address: 'Manzil',
     },
 
     {
-      day: 'Se',
-      information: 'Dushanba — Juma: 08:00 – 17:00',
+      day: t("title_tuesday_short"),
+      information: `${t("title_footer_work_schedule_key")}08:00 - 17:00`,
       email: '5shifoxonasi@gmail.com',
       phone_number: '+998 62 000 00 00',
       address: 'Manzil',
     },
 
     {
-      day: 'Ch',
-      information: 'Dushanba — Juma: 08:00 – 17:00',
+      day: t("title_wednesday_short"),
+      information: `${t("title_footer_work_schedule_key")}08:00 - 17:00`,
       email: '5shifoxonasi@gmail.com',
       phone_number: '+998 62 000 00 00',
       address: 'Manzil',
     },
 
     {
-      day: 'Pa',
-      information: 'Dushanba — Juma: 08:00 – 17:00',
+      day: t("title_thursday_short"),
+      information: `${t("title_footer_work_schedule_key")}08:00 - 17:00`,
       email: '5shifoxonasi@gmail.com',
       phone_number: '+998 62 000 00 00',
       address: 'Manzil',
     },
 
     {
-      day: 'Ju',
-      information: 'Dushanba — Juma: 08:00 – 17:00',
+      day: t("title_friday_short"),
+      information: `${t("title_footer_work_schedule_key")}08:00 - 17:00`,
       email: '5shifoxonasi@gmail.com',
       phone_number: '+998 62 000 00 00',
       address: 'Manzil',
     },
 
     {
-      day: 'Sh',
-      information: 'Dushanba — Juma: 08:00 – 17:00',
+      day: t("title_saturday_short"),
+      information: `${t("title_footer_work_schedule_key")}08:00 - 17:00`,
       email: '5shifoxonasi@gmail.com',
       phone_number: '+998 62 000 00 00',
       address: 'Manzil',
     },
 
     {
-      day: 'Ya',
-      information: 'Dam olish',
+      day: t("title_sunday_short"),
+      information: t("title_rest_day"),
       email: '5shifoxonasi@gmail.com',
       phone_number: '+998 62 000 00 00',
       address: 'Manzil',
     },
   ];
 
-  const [activeDay, setActiveDay] = useState<string>('Du');
+  const [activeDay, setActiveDay] = useState<string>(t("title_monday_short"));
 
   const service = services.find((service) => service.slug === slug);
   if (!service) {
@@ -249,21 +251,21 @@ export function Detail() {
                           styles.detail_page_layout_content_schedule_information_item_list_email
                         }
                       >
-                        E-mail: <span>{schedule.email}</span>
+                        {t("title_footer_email_key")}<span>{schedule.email}</span>
                       </p>
                       <p
                         className={
                           styles.detail_page_layout_content_schedule_information_item_list_phone_number
                         }
                       >
-                        Telefon raqam: {schedule.phone_number}
+                        {t("title_footer_number_key")}{schedule.phone_number}
                       </p>
                       <p
                         className={
                           styles.detail_page_layout_content_schedule_information_item_list_address
                         }
                       >
-                        Manzil: {schedule.address}
+                        {t("title_footer_address_key")}{schedule.address}
                       </p>
                     </div>
                   </div>
